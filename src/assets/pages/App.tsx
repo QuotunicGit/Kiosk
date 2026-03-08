@@ -9,6 +9,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/menu" element={<Menu />} />
                     <Route path="/orders" element={<Orders />} />
+                    <Route path="settings" element={<Settings />} />
                 </Routes>
             </BrowserRouter>
         </>
@@ -25,6 +26,7 @@ function Home() {
                 <li onClick={() => navigate("/")}>Home</li>
                 <li onClick={() => navigate("/menu")}>Menu</li>
                 <li onClick={() => navigate("/orders")}>Orders</li>
+                <li onClick={() => navigate("/settings")}>Settings</li>
             </ul>
         </>
     )
@@ -40,6 +42,7 @@ function Menu() {
                 <li onClick={() => navigate("/")}>Home</li>
                 <li onClick={() => navigate("/menu")}>Menu</li>
                 <li onClick={() => navigate("/orders")}>Orders</li>
+                <li onClick={() => navigate("/settings")}>Settings</li>
             </ul>
         </>
     )
@@ -55,7 +58,21 @@ function Orders() {
                 <li onClick={() => navigate("/")}>Home</li>
                 <li onClick={() => navigate("/menu")}>Menu</li>
                 <li onClick={() => navigate("/orders")}>Orders</li>
+                <li onClick={() => navigate("/settings")}>Settings</li>
             </ul>
+        </>
+    )
+}
+
+function Settings() {
+    const navigate = useNavigate();
+    
+    return (
+        <>
+            <ul>
+                <li onClick={() => navigate('/')}>Home</li>
+            </ul>
+            <p>Settings</p>
         </>
     )
 }
